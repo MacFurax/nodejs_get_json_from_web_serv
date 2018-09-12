@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  button(type='button', class='btn btn-primary' id='clickme') Click me !
+
+  div(class='card', style='width: 18rem')
+    ul(class='list-group list-group-flush')
+      il(class='list-group-item') FX ID 01 
+        button(type='button', class='btn btn-primary' id='startcue01') Start Cue
+      il(class='list-group-item') FX ID 02
+      il(class='list-group-item') FX ID 03
+      il(class='list-group-item') FX ID 04
+
+  script.
+    // once document is ready
+    $(function(){
+      $('#clickme').on('click', function (e) {
+        console.log( "Clicked!" );
+      })
+    });
+    
